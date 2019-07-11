@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CMD="mvn clean test-compile surefire:test " #Command that runs your tests
+CMD="mvn clean test " #Command that runs your tests
 
 commits=`git log @{u}..`
 if [ -z "$commits" ]; then
