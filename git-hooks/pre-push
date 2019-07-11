@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+CMD="mvn clean test-compile surefire:test " #Command that runs your tests
+
+commits=`git log @{u}..`
+if [ -z "$commits" ]; then
+   exit 0
+fi
+
+
+$CMD
+RESULT="$?"
+if [ $RESULT -ne 0 ]; then
+   echo "failed build"
+   exit 1
+fi
+
+exit 0
