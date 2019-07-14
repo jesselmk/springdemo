@@ -104,8 +104,8 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <copy todir=".git/hooks/" overwrite="true">
-                                    <fileset dir="git-hooks/"/>
+                                <copy todir=".git\\hooks\\" overwrite="true">
+                                    <fileset dir="git-hooks\\"/>
                                 </copy>
                             </tasks>
                         </configuration>
