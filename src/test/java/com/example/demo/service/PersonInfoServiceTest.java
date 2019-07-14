@@ -23,10 +23,6 @@ public class PersonInfoServiceTest extends BDDMockito {
     private PersonRepository personRepository;
 
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
     @Test
     public void should_InsertPersonInfo() {
         // given
@@ -34,7 +30,6 @@ public class PersonInfoServiceTest extends BDDMockito {
         Integer age = 23;
         Person person = new Person(name, age);
         Person personSaved = new Person(name, age);
-        personRepository = mock(PersonRepository.class);
         when(personRepository.save(person)).thenReturn(personSaved);
         // when
         personInfoService.insertPersonInfo("Alice", 23);
