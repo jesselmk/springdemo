@@ -43,19 +43,6 @@
   <!-- 每个java文件一个语法树 -->
   <module name="TreeWalker">
     <!-- 注释检查 -->
-    <!-- 检查方法和构造函数的javadoc -->
-    <module name="JavadocMethod">
-      <property name="tokens" value="METHOD_DEF" />
-
-    </module>
-    <!-- 检查类和接口的javadoc。默认不检查author和version tags -->
-    <module name="JavadocType"/>
-    <!-- 检查变量的javadoc -->
-    <module name="JavadocVariable"/>
-    <!-- 检查javadoc的格式 -->
-    <module name="JavadocStyle">
-      <property name="checkFirstSentence" value="false"/>
-    </module>
     <!-- 检查TODO:注释 -->
     <module name="TodoComment"/>
 
@@ -219,26 +206,6 @@
     <module name="InterfaceIsType"/>
     <!-- 检查类成员的可见度 -->
     <module name="VisibilityModifier"/>
-
-
-    <!-- 其他检查 -->
-    <!-- 文件中使用了System.out.print等
-    <module name="GenericIllegalRegexp">
-        <property name="format" value="System\.out\.print"/>
-    </module>
-    <module name="GenericIllegalRegexp">
-        <property name="format" value="System\.exit"/>
-    </module>
-    <module name="GenericIllegalRegexp">
-        <property name="format" value="printStackTrace"/>
-    </module>-->
-
-
-    <!-- 代码质量 -->
-    <!-- 圈复杂度
-    <module name="CyclomaticComplexity">
-          <property name="max" value="2"/>
-    </module> -->
   </module>
 
 </module>

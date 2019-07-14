@@ -6,14 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ManagePersonInfoService {
+public class PersonInfoService {
     @Autowired
     private PersonRepository personRepository;
 
     public void insertPersonInfo(String name, Integer age) {
-        Person p = new Person();
-        p.setAge(age);
-        p.setName(name);
+        Person p = new Person(name, age);
         personRepository.save(p);
     }
 }

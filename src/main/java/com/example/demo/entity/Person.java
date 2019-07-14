@@ -1,8 +1,11 @@
 package com.example.demo.entity;
 
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Person {
@@ -14,8 +17,9 @@ public class Person {
     @Column
     private Integer age;
 
-    public void setId(Integer id) {
-        this.id = id;
+    public Person(String name, Integer age) {
+        this.name = name;
+        this.age = age;
     }
 
     public void setName(String name) {
