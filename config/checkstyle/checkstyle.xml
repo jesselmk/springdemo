@@ -16,7 +16,7 @@
     <!-- <module name="JavadocPackage"/> -->
 
     <!-- 检查文件是否以一个空行结束 -->
-    <module name="NewlineAtEndOfFile"/>
+<!--    <module name="NewlineAtEndOfFile"/>-->
 
     <!-- 检查property文件中是否有相同的key -->
     <module name="Translation"/>
