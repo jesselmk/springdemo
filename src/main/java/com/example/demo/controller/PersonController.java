@@ -14,7 +14,7 @@ public class PersonController {
     @Autowired
     private PersonInfoService personInfoService;
 
-    @PostMapping(value = "/insert")
+    @PostMapping(value = "/person")
     public ResponseEntity insert(@RequestBody PersonInfo personInfo) {
         personInfoService.insertPersonInfo(personInfo.getName(), personInfo.getAge());
         return new ResponseEntity("操作成功", HttpStatus.OK);
