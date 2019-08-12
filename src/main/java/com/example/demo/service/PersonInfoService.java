@@ -10,7 +10,7 @@ public class PersonInfoService {
     @Autowired
     private PersonRepository personRepository;
 
-    public void insertPersonInfo(String name, Integer age) {
+    public void insertPerson(String name, Integer age) {
         Person p = new Person(name, age);
         personRepository.save(p);
     }

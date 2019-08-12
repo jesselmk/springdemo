@@ -7,16 +7,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping(value = "person")
 public class PersonController {
     @Autowired
     private PersonInfoService personInfoService;
 
-    @PostMapping(value = "/person")
-    public ResponseEntity insert(@RequestBody PersonInfo personInfo) {
-        personInfoService.insertPersonInfo(personInfo.getName(), personInfo.getAge());
+    @PostMapping()
+    public ResponseEntity insertPerson(@RequestBody PersonInfo personInfo) {
+        personInfoService.insertPerson(personInfo.getName(), personInfo.getAge());
         return new ResponseEntity("操作成功", HttpStatus.OK);
     }
 }

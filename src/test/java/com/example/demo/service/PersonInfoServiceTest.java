@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Person;
 import com.example.demo.entityrepository.PersonRepository;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.BDDMockito;
@@ -32,7 +31,7 @@ public class PersonInfoServiceTest extends BDDMockito {
         Person personSaved = new Person(name, age);
 //        when(personRepository.save(person)).thenReturn(personSaved);
         // when
-        personInfoService.insertPersonInfo("Alice", 23);
+        personInfoService.insertPerson("Alice", 23);
         // then
         assertThat(personSaved).isEqualToComparingFieldByField(person);
     }
