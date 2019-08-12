@@ -1,4 +1,4 @@
-package com.example.demo.exceptionhandler;
+package com.example.demo.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 
 @ControllerAdvice
-public class GlobalExceptionHandler {
+public class GlobalException {
     @ResponseBody
     @ExceptionHandler(value = RuntimeException.class)
     public ResponseEntity exceptionHandler(HttpServletRequest httpServletRequest, RuntimeException e) {
