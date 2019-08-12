@@ -14,7 +14,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
-public class PersonInfoServiceTest extends BDDMockito {
+public class PersonRequestServiceTest extends BDDMockito {
     @InjectMocks
     private PersonInfoService personInfoService;
 

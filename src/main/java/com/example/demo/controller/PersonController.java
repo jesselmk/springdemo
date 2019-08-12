@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.request.PersonInfo;
+import com.example.demo.request.PersonRequest;
 import com.example.demo.service.PersonInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,8 +17,8 @@ public class PersonController {
     private PersonInfoService personInfoService;
 
     @PostMapping()
-    public ResponseEntity insertPerson(@RequestBody PersonInfo personInfo) {
-        personInfoService.insertPerson(personInfo.getName(), personInfo.getAge());
+    public ResponseEntity insertPerson(@RequestBody PersonRequest personRequest) {
+        personInfoService.insertPerson(personRequest.getName(), personRequest.getAge());
         return new ResponseEntity("操作成功", HttpStatus.OK);
     }
 }
