@@ -27,12 +27,9 @@ public class PersonRequestServiceTest extends BDDMockito {
         // given
         String name = "Alice";
         Integer age = 23;
-        Person person = new Person(name, age);
-        Person personSaved = new Person(name, age);
-//        when(personRepository.save(person)).thenReturn(personSaved);
         // when
-        personInfoService.insertPerson("Alice", 23);
+        personInfoService.insertPerson(name, age);
         // then
-        assertThat(personSaved).isEqualToComparingFieldByField(person);
+        verify(personRepository).save(any());
     }
 }
